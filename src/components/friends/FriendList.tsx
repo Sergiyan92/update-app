@@ -12,7 +12,7 @@ interface FriendsListProps {
 }
 const FriendList: React.FC<FriendsListProps> = ({ friends }) => {
   return (
-    <ul>
+    <ul className="container flex flex-col mt-10">
       {friends.map((friend) => (
         <Friend key={friend.id} {...friend} />
       ))}

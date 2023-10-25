@@ -10,20 +10,26 @@ interface TransactionHistoryProps {
 }
 const TransactionHistory: React.FC<TransactionHistoryProps> = ({ items }) => {
   return (
-    <table>
+    <table className="container w-100 border-collapse ml-auto mr-auto mt-5">
       <thead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <th className="border  p-8 bg-blue-600 text-white text-center">
+            Type
+          </th>
+          <th className="border  p-8  bg-blue-600 text-white text-center">
+            Amount
+          </th>
+          <th className="border  p-8  bg-blue-600 text-white text-center">
+            Currency
+          </th>
         </tr>
       </thead>
       <tbody>
         {items.map(({ id, type, amount, currency }) => (
           <tr key={id}>
-            <td>{type}</td>
-            <td>{amount}</td>
-            <td>{currency}</td>
+            <td className="border  p-4 text-center">{type}</td>
+            <td className="border  p-4 text-center">{amount}</td>
+            <td className="border  p-4 text-center">{currency}</td>
           </tr>
         ))}
       </tbody>

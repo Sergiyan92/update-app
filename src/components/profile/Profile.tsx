@@ -11,9 +11,13 @@ interface UserProps {
 }
 const Profile = ({ username, tag, location, avatar, stats }: UserProps) => {
   return (
-    <div className="container flex flex-col border items-center ml-auto mr-auto mt-10">
+    <div className="container pt-3 pb-3 w-[300px] flex flex-col border items-center ml-auto mr-auto mt-10">
       <div className="flex flex-col items-center">
-        <img src={avatar} alt="User avatar" className="w-[100px] " />
+        <img
+          src={avatar}
+          alt="User avatar"
+          className="w-[100px] rounded-full "
+        />
         <p className="text-center">{username}</p>
         <p className="text-center">{tag}</p>
         <p className="text-center">{location}</p>
